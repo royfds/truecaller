@@ -1,3 +1,10 @@
+### Disclaimier 
+```WE THE TEAM VENILA BOTS HAS 
+NO ACCESS TO THE SPAM REPORTS 
+OR MISLEADING OR USING THE REPO 
+FOR OTHER PURPOSE{ILLEGAL} IS 
+PROHABITED.
+```
 # Phone Number Tracker bot
 
 Pluggable
@@ -23,14 +30,10 @@ Mozilla Public License for more details.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/rohithaditya/truecaller)
 
-
-
-
-
 #### The Legacy Way
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/agentnova/KnowhoBot.git
+git clone https://github.com/rohithaditya/truecaller
 
 cd KnowhoBot
 
@@ -56,4 +59,5 @@ class cred():
     E_AUTH_C= "from eyecon app request header" 
     
 ```
-
+### THANK YOU  FOR READING 
+### DONT FORGET TO STAR AND FORK
