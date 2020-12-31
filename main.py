@@ -17,7 +17,7 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     client.send_message(chat_id=message.chat.id,
-                        text=f"`Hi` **{message.from_user.first_name}**\n `Enter the 10 digit Indian Mobile number to search...`",reply_markup=InlineKeyboardMarkup(
+                        text=f"`Hi` **{message.from_user.first_name}**\n I Am A Phone Number 📞Identifier Bot, Made With Love From @Venilabots \n `Enter the 10 digit Indian Mobile number to search...`",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]))
     check_status = check(message.chat.id)
@@ -26,7 +26,7 @@ def start(client, message):
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Bot`            : [Identify Unknown Number](t.me/phonecalltrackerbot)\n`Creator :` [Rohithaditya](t.me/rohithaditya)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+        callback_query.message.edit(text=f"`Bot`            : [Identify Unknown Number](t.me/phonecalltrackerbot)\n`Creator :` [Rohithaditya](t.me/rohithaditya)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/) \n [BOT UPDATE CHANEL](t.me/Venilabots)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Give Feedback", url="t.me/rohithaditya")]]))
     elif txt=="src":
@@ -67,7 +67,7 @@ def echo(client, message):
     frbsetrname = ""
     frbsetrmail = ""
     if num.isnumeric and len(num) == 10:
-        pq = "\n\n**----••Truecaller says----**\n\nLimit exceeded ,try again tomorrow 🤦🏻‍♂️"
+        pq = "\n\n**----•➕RESULTS➕❤----**\n\nLimit exceeded ,try again tomorrow 🤦🏻‍♂️"
         tresponse = ""
         try:
             tresponse = truecaller_search(cred.T_AUTH, num)
@@ -77,16 +77,16 @@ def echo(client, message):
                 tjsonload = json.loads(trslt)
                 if "name" in tjsonload['data'][0]:
                     if tjsonload['data'][0]['internetAddresses']:
-                        pq = f"\n\n**----••Truecaller says----**\n\nName : `{tjsonload['data'][0]['name']}`\nCarrier : `{tjsonload['data'][0]['phones'][0]['carrier']}` \nE-mail : {tjsonload['data'][0]['internetAddresses'][0]['id']}"
+                        pq = f"\n\n**----•➕RESULTS➕❤----**\n\nName : `{tjsonload['data'][0]['name']}`\nCarrier : `{tjsonload['data'][0]['phones'][0]['carrier']}` \nE-mail : {tjsonload['data'][0]['internetAddresses'][0]['id']}"
                         frbsetrname = tjsonload['data'][0]['name']
                         frbsetrmail = tjsonload['data'][0]['internetAddresses'][0]['id']
                     elif not tjsonload['data'][0]['internetAddresses']:
-                        pq = f"\n\n**----••Truecaller says----**\n\nName : `{tjsonload['data'][0]['name']}`\nCarrier : `{tjsonload['data'][0]['phones'][0]['carrier']}`"
+                        pq = f"\n\n**----•❤RESULTS❤----**\n\nName : `{tjsonload['data'][0]['name']}`\nCarrier : `{tjsonload['data'][0]['phones'][0]['carrier']}`"
                         frbsetrname = tjsonload['data'][0]['name']
                 else:
-                    pq = "\n\n**----••Truecaller says----**\n\nNo results found 🤦🏻‍♂️"
+                    pq = "\n\n**----❤RESULTS❤----**\n\nNo results found 🤦🏻‍♂️"
             if tresponse.status_code == 429:
-                pq = "\n\n**----••Truecaller says----**\n\nLimit exceeded ,try again tomorrow 🤦🏻‍♂️"
+                pq = "\n\n**----JOIN OUR BOT CHANNEL ----**\n\nLimit exceeded ,try again tomorrow 🤦🏻‍♂️"
         except:
             pass
         response = eyecon_search(num)
@@ -101,16 +101,16 @@ def echo(client, message):
                 temp = json.dumps(rslt).replace('[', '').replace(']', '')
                 jsonload = json.loads(temp)
 
-                yk = f"\n\n**----••Eyecon says----**\n\nName :`{jsonload['name']}`"
+                yk = f"\n\n**----•❤RESULTS❤----**\n\nName :`{jsonload['name']}`"
                 frbseyename = jsonload["name"]
                 if "facebook.com" in fbrslt:
-                    yk = f"\n\n**----••Eyecon says----**\n\nName : `{jsonload['name']}`\nFacebook : {fbrslt}"
+                    yk = f"\n\n**----•❤RESULTS❤----**\n\nName : `{jsonload['name']}`\nFacebook : {fbrslt}"
                     frbseyename = jsonload["name"]
                     frbsefb = fbrslt
             else:
-                yk = "**----••Eyecon says----**\n\nNo results found 🤦🏻‍♂️"
+                yk = "**----•❤RESULTS❤----**\n\nNo results found 🤦🏻‍♂️"
         else:
-            yk = "**----••Eyecon says----**\n\nNo results found 🤦🏻‍♂️"
+            yk = "**----❤YOU HAVE NOT JOINED OUR BOT CHANNEL❤----**\n\nNo results found 🤦🏻‍♂️"
 
         yk += pq
         pro.edit(text=yk, disable_web_page_preview=True,reply_markup=InlineKeyboardMarkup(
