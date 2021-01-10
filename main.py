@@ -26,7 +26,7 @@ def start(client, message):
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Bot`            : [Identify Unknown Number](t.me/phonecalltrackerbot)\n`Creator :` [Rohithaditya](t.me/rohithaditya)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/) \n [BOT UPDATE CHANEL](t.me/Venilabots)",
+        callback_query.message.edit(text=f"`Bot`            : [Identify Unknown Number](t.me/phonecalltrackerbot)\n`Creator :` [Roy](t.me/royfds)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/) \n [BOT UPDATE CHANEL](t.me/moviezbarn)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Give Feedback", url="t.me/rohithaditya")]]))
     elif txt=="src":
@@ -37,9 +37,9 @@ def newbt(client,callback_query):
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"`Bot`            : [True Caller Bot](t.me/phonecalltrackerbot)\n`Creator :` [agentnova](t.me/rohith)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+                        text=f"`Bot`            : [True Caller Bot](t.me/phonecalltrackerbot)\n`Creator :` [agentnova](t.me/royfds)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Feedback", url="t.me/agentnova")]]))
+            [[InlineKeyboardButton("Feedback", url="t.me/royfds")]]))
 
 
 @app.on_message(filters.command(["log"]))
@@ -110,7 +110,7 @@ def echo(client, message):
             else:
                 yk = "**----•❤RESULTS❤----**\n\nNo results found 🤦🏻‍♂️"
         else:
-            yk = "**----❤YOU HAVE NOT JOINED OUR BOT CHANNEL❤----**\n\nNo results found 🤦🏻‍♂️"
+            yk = "**----❤YOU HAVE NOT JOINED OUR BOT CHANNEL❤ t.me/moviezbarn ----**\n\nNo results found 🤦🏻‍♂️"
 
         yk += pq
         pro.edit(text=yk, disable_web_page_preview=True,reply_markup=InlineKeyboardMarkup(
